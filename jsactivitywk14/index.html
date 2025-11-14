@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Confirmation</title>
+</head>
+<!-- Basic body centering using inline CSS -->
+<body style="font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background-color: #f0f0f0;">
+
+    <!-- Container with inline styling -->
+    <div style="padding: 20px; background-color: white; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; width: 300px;">
+        
+        <!-- Status Display -->
+        <div id="s" style="font-size: 24px; font-weight: bold; margin-bottom: 20px; color: gray;">Status: Pending</div>
+
+        <!-- Action Button with inline click handler -->
+        <button id="b" onclick="c()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Click to Start Confirmation</button>
+
+        <!-- Confirmed Message Box (Hidden until click) -->
+        <div id="m" style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #eee; color: green; font-size: 18px; font-weight: bold; display: none;">
+            CONFIRMED
+        </div>
+    </div>
+
+    <!-- Condensed JavaScript -->
+    <script>
+        // Use single-letter IDs and function name for maximum condensation
+        const s = document.getElementById('s'); // Status display
+        const b = document.getElementById('b'); // Button
+        const m = document.getElementById('m'); // Message box
+
+        function c() { // Confirmation function
+            s.textContent = 'Status: Confirmed!';
+            s.style.color = 'green';
+            b.disabled = true;
+            m.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
